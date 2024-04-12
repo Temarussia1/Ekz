@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход" Click="MenuItem_Exit_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Общий объем хранилища:" Grid.Row="0"/>
+            <TextBox x:Name="txtОбщийОбъем" Grid.Row="0" Margin="5,0" Width="100"/>
+
+            <Label Content="Текущий запас топлива:" Grid.Row="1"/>
+            <TextBox x:Name="txtТекущийЗапас" Grid.Row="1" Margin="5,0" Width="100"/>
+
+            <Label Content="Объем топлива для заправки:" Grid.Row="2"/>
+            <TextBox x:Name="txtОбъемЗаправки" Grid.Row="2" Margin="5,0" Width="100"/>
+
+            <Button Content="Заправить" Grid.Row="3" Margin="5,0" Click="Button_Заправить_Click"/>
+
+            <TextBlock x:Name="txtРезультат" Grid.Row="4" Margin="5,0"/>
+        </Grid>
+    </Grid>
+</Window>
+
